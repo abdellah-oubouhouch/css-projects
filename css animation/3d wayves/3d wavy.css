@@ -1,0 +1,144 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  max-width: 100vw;
+  display: flex;
+  background: #000;
+}
+
+.cicrle {
+  width: 250px;
+  height: 250px;
+
+  margin: auto;
+  position: relative;
+
+  perspective: 400px;
+  transform-style: preserve-3d;
+  transform: rotateX(60deg);
+}
+
+.cicrle i {
+  position: absolute;
+  border: 5px solid white;
+  box-shadow: 0px 5px 0px 0px inset wheat;
+  border-radius: 50%;
+
+  animation-name: animated;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes animated {
+  0% {
+    transform: translateZ(100px);
+  }
+  50% {
+    transform: translateZ(-100px);
+    scale: 1.1;
+  }
+  100% {
+    transform: translateZ(100px);
+    scale: 1.2;
+  }
+}
+
+.cicrle i:nth-child(1) {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+.cicrle i:nth-child(2) {
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+}
+.cicrle i:nth-child(3) {
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+}
+.cicrle i:nth-child(4) {
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+}
+.cicrle i:nth-child(5) {
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+}
+.cicrle i:nth-child(6) {
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+}
+
+.cicrle i:nth-child(7) {
+  top: 60px;
+  left: 60px;
+  right: 60px;
+  bottom: 60px;
+}
+
+.cicrle i:nth-child(8) {
+  top: 70px;
+  left: 70px;
+  right: 70px;
+  bottom: 70px;
+}
+.cicrle i:nth-child(9) {
+  top: 80px;
+  left: 80px;
+  right: 80px;
+  bottom: 80px;
+}
+.cicrle i:nth-child(10) {
+  top: 90px;
+  left: 90px;
+  right: 90px;
+  bottom: 90px;
+}
+.cicrle i:nth-child(11) {
+  top: 100px;
+  left: 100px;
+  right: 100px;
+  bottom: 100px;
+}
+.cicrle i:nth-child(12) {
+  top: 110px;
+  left: 110px;
+  right: 110px;
+  bottom: 110px;
+}
+
+.cicrle i:nth-child(13) {
+  top: 120px;
+  left: 120px;
+  right: 120px;
+  bottom: 120px;
+}
+.cicrle i:nth-child(14) {
+  top: 130px;
+  left: 130px;
+  right: 130px;
+  bottom: 130px;
+}
+.cicrle i:nth-child(15) {
+  top: 140px;
+  left: 140px;
+  right: 140px;
+  bottom: 140px;
+}

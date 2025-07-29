@@ -1,0 +1,36 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.b1 {
+  transform-style: flat;
+  background: #c1bdbdf3;
+
+  width: 90%;
+  margin: auto;
+  margin-top: 89px;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.b3 {
+  width: 200px;
+  height: 100px;
+  background: #0334fa80;
+}
+
+.b4 {
+  width: 20px;
+  height: 100px;
+  background: #9d0eda80;
+  position: absolute;
+  display: block;
+}
+
+.b5 {
+  width: 200px;
+  height: 100px;
+  background: #03030380;
+  margin-top: 10px;
+}

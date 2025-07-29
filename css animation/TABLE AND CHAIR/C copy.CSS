@@ -1,0 +1,134 @@
+/* Basic setup for the page */
+body {
+  background-color: #f0f0f0;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* THE 3D WORLD
+  - perspective: Creates the depth. Smaller values mean more extreme perspective.
+  - perspective-origin: Sets the "vanishing point" of the scene.
+*/
+.scene {
+  width: 600px;
+  height: 400px;
+  perspective: 1200px;
+  perspective-origin: 50% -150%;
+  border: 1px solid #ccc;
+  background: linear-gradient(to bottom, #e0e0e0, #ffffff);
+}
+
+/* THE SET CONTAINER
+  - transform-style: This is CRUCIAL. It tells the browser that children of this
+    element should be positioned in 3D space, not flattened onto a 2D plane.
+  - transform: Rotates the entire set so we can see it from an angle.
+*/
+.set {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(10deg) rotateY(20deg);
+}
+
+/* Shared properties for the table and chair containers */
+.table,
+.chair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+}
+
+/* Position the table in the center */
+.table {
+  transform: translate3d(-50%, -50%, 0);
+}
+
+/* TABLE STYLING
+  - .face: Represents a flat surface of an object.
+  - transform: rotateX/rotateY moves the flat plane into a 3D orientation.
+    translateZ moves it forward or backward.
+*/
+.table .top {
+  width: 200px;
+  height: 120px;
+  background: #8b4513; /* Brown wood color */
+  border: 1px solid #654321;
+  position: absolute;
+  transform: translate3d(-100px, -60px, 0) rotateX(90deg);
+}
+
+/* LEG STYLING
+  - We create a simple box for each leg using transforms.
+*/
+.table .leg {
+  width: 15px;
+  height: 80px;
+  position: absolute;
+  background: #8b4513;
+  transform-origin: top;
+  transform: rotateX(-90deg);
+}
+
+.table .leg-fl {
+  transform: rotateX(-90deg) translate3d(-90px, -50px, -40px);
+}
+.table .leg-fr {
+  transform: rotateX(-90deg) translate3d(75px, -50px, -40px);
+}
+.table .leg-bl {
+  transform: rotateX(-90deg) translate3d(-90px, 50px, -40px);
+}
+.table .leg-br {
+  transform: rotateX(-90deg) translate3d(75px, 50px, -40px);
+}
+
+/* CHAIR STYLING 
+  - Positioned relative to the center, then moved out.
+*/
+.chair {
+  transform: translate3d(150px, -50%, 0) rotateY(-30deg);
+}
+
+.chair .face {
+  position: absolute;
+  border: 1px solid #5a3a1a;
+  background: #a0522d;
+}
+
+.chair .seat {
+  width: 50px;
+  height: 50px;
+  transform: translate3d(-25px, -25px, 0) rotateX(90deg);
+}
+
+.chair .back {
+  width: 50px;
+  height: 60px;
+  transform: translate3d(-25px, -25px, -25px) rotateX(0deg);
+}
+
+.chair .leg {
+  width: 8px;
+  height: 40px;
+  position: absolute;
+  background: #a0522d;
+  transform-origin: top;
+}
+
+.chair .leg-fl {
+  transform: rotateX(-90deg) translate3d(-20px, -20px, 0);
+}
+.chair .leg-fr {
+  transform: rotateX(-90deg) translate3d(12px, -20px, 0);
+}
+.chair .leg-bl {
+  transform: rotateX(-90deg) translate3d(-20px, 12px, 0);
+}
+.chair .leg-br {
+  transform: rotateX(-90deg) translate3d(12px, 12px, 0);
+}

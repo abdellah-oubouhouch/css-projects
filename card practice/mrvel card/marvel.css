@@ -1,0 +1,104 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+}
+
+.conatnier {
+  min-height: 100vh;
+  min-width: 100vh;
+  display: flex;
+  background: #ffffff;
+}
+
+.card {
+  width: 400px;
+  box-shadow: 10px 0px 10px 0px #0000006e;
+  height: 300px;
+  box-sizing: border-box;
+  margin: auto;
+  border: 1px solid rgb(6, 6, 6);
+
+  border-radius: 10px;
+  background: linear-gradient(to right, rgb(94, 47, 95), rgb(190, 23, 23));
+}
+.image {
+  width: 50%;
+  text-align: center;
+  height: 100%;
+  margin: auto;
+  height: 100%;
+
+  transition: 0.5s;
+  position: relative;
+  z-index: 20;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  position: relative;
+  z-index: 20;
+}
+.image::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  height: 40px;
+  width: 100%;
+  background: #ffffff;
+  z-index: 20;
+}
+.card:hover .image img {
+  transform: scale(1.5) translateY(-40px) skewY(10deg);
+}
+.card:hover .image {
+  transform: translateX(150px) skewY(-10deg);
+}
+
+.text {
+  width: 50%;
+  position: relative;
+  top: -200px;
+  padding-left: 20px;
+  z-index: 0;
+  visibility: hidden;
+  opacity: 0;
+  left: 30%;
+  transition: 0.5s;
+}
+.text h1 {
+  font-size: 20px;
+  color: rgb(252, 129, 129);
+  letter-spacing: 1px;
+}
+
+.text h1 span {
+  font-size: 20px;
+  color: rgb(26, 79, 178);
+  letter-spacing: 1px;
+  font-weight: 1000;
+}
+.text b {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.66);
+
+  letter-spacing: 1px;
+}
+.card:hover .text {
+  visibility: visible;
+  opacity: 1;
+  left: 0;
+}
+
+.text p {
+  letter-spacing: 1px;
+  font-size: 17px;
+  margin-top: 10px;
+  transition: 0.5s;
+  color: rgb(254, 252, 252);
+}

@@ -1,0 +1,320 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  background: #000;
+}
+
+.card {
+  width: 280px;
+  height: 340px;
+  border-radius: 20px;
+  background: #343333;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.card .image {
+  width: 100%;
+  height: 50%;
+  /* background: #706969; */
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.4s;
+  overflow: hidden;
+}
+.card .image img {
+  width: 60%;
+  position: absolute;
+  transform: rotate(-30deg);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.4s;
+}
+
+.card:hover .image {
+  top: 0%;
+  transform: translate(-50%, 0%);
+}
+
+.card::before {
+  width: 100%;
+  content: "";
+  position: absolute;
+
+  top: -50%;
+  height: 100%;
+  background: #287718;
+  transform: skewY(340deg);
+  transition: 0.5s;
+
+  /* transform: skewY(30deg); */
+}
+
+.card::after {
+  content: "Nike";
+  width: 100%;
+  position: absolute;
+  bottom: 40px;
+  font-size: 90px;
+  color: rgba(255, 255, 255, 0.058);
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.card:hover::before {
+  transform: skewY(390deg);
+  top: -60%;
+}
+
+.title {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 50%;
+}
+
+.title h1 {
+  margin-top: 50px;
+  color: rgb(255, 253, 253);
+  font-style: oblique;
+  margin-bottom: 30px;
+}
+
+/* **********text */
+
+.card .text {
+  padding: 20px;
+  color: white;
+  position: relative;
+  top: 40px;
+  transition: 0.6s;
+}
+
+.card:hover .text {
+  top: -60px;
+}
+.card .text .size {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.card .text .size label {
+  font-size: 20px;
+}
+.card .text .size ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+}
+.card .text .size ul li {
+  width: 15%;
+  border: 1px solid rgba(0, 0, 0, 0.416);
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  color: black;
+
+  align-items: center;
+  background: #fffefe;
+  border-radius: 3px;
+}
+
+.card .text .color {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-evenly;
+}
+.card .text .color p {
+  font-size: 20px;
+}
+.card .text .color .green {
+  background: green;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+}
+
+.card .text .color .red {
+  background: rgb(213, 7, 7);
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+}
+.card .text .color .blue {
+  background: rgb(7, 164, 199);
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  background: #000;
+}
+
+.card {
+  width: 280px;
+  height: 340px;
+  border-radius: 20px;
+  background: #343333;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.card .image {
+  width: 100%;
+  height: 50%;
+  /* background: #706969; */
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.4s;
+  overflow: hidden;
+}
+.card .image img {
+  width: 60%;
+  position: absolute;
+  transform: rotate(-30deg);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.4s;
+}
+
+.card:hover .image {
+  top: 0%;
+  transform: translate(-50%, 0%);
+}
+
+.card::before {
+  width: 100%;
+  content: "";
+  position: absolute;
+
+  top: -50%;
+  height: 100%;
+  background: #287718;
+  transform: skewY(340deg);
+  transition: 0.5s;
+
+  /* transform: skewY(30deg); */
+}
+
+.card::after {
+  content: "Nike";
+  width: 100%;
+  position: absolute;
+  bottom: 40px;
+  font-size: 90px;
+  color: rgba(255, 255, 255, 0.058);
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.card:hover::before {
+  transform: skewY(390deg);
+  top: -60%;
+}
+
+.title {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 50%;
+}
+
+.title h1 {
+  margin-top: 50px;
+  color: rgb(255, 253, 253);
+  font-style: oblique;
+  margin-bottom: 30px;
+}
+
+/* **********text */
+
+.card .text {
+  padding: 20px;
+  color: white;
+  position: relative;
+  top: 40px;
+  transition: 0.6s;
+}
+
+.card:hover .text {
+  top: -60px;
+}
+.card .text .size {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.card .text .size label {
+  font-size: 20px;
+}
+.card .text .size ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+}
+.card .text .size ul li {
+  width: 15%;
+  border: 1px solid rgba(0, 0, 0, 0.416);
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  color: black;
+
+  align-items: center;
+  background: #fffefe;
+  border-radius: 3px;
+}
+
+.card .text .color {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-evenly;
+}
+.card .text .color p {
+  font-size: 20px;
+}
+.card .text .color .green {
+  background: green;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+}
+
+.card .text .color .red {
+  background: rgb(213, 7, 7);
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+}
+.card .text .color .blue {
+  background: rgb(7, 164, 199);
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+}

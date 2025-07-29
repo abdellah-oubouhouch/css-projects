@@ -1,0 +1,202 @@
+* {
+  padding: 0px;
+  margin: 0xp;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #cb2c2c;
+  overflow: hidden;
+  padding: 100px 20px;
+}
+
+.containter {
+  height: 340px;
+  width: 300px;
+  backdrop-filter: blur(10px);
+}
+
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.44);
+  width: 100%;
+  height: 100%;
+  background: #fffffff7;
+  border-radius: 10px;
+  background: rgba(255, 253, 253, 0.186);
+  /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); */
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.395);
+}
+
+.image {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  width: 80%;
+  transition: 0.6s;
+}
+
+.card:hover .image img {
+  transform: translateY(-130px) rotate(-30deg);
+}
+
+h2 {
+  font-size: 40px;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 2px;
+}
+/* --------------tetx */
+
+.text {
+  max-width: 100%;
+  overflow: hidden;
+
+  transform: translateY(-180px);
+  opacity: 0;
+  transition: 0.8s;
+  visibility: hidden;
+}
+
+.card:hover .text {
+  transform: translateY(-280px);
+  visibility: visible;
+
+  opacity: 1;
+}
+.text .size {
+  display: flex;
+
+  padding: 0 20px;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.text .size ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1px;
+
+  max-width: 100%;
+}
+
+.text .size label,
+.text .color label {
+  font-size: 30px;
+}
+
+.text .size ul li {
+  margin-left: 10px;
+  padding: 5px 1px;
+  width: 33px;
+  height: 30px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 5px;
+  background: white;
+  border: none;
+}
+
+/* ------------------color  */
+
+.color {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 3px;
+}
+
+.color .green {
+  background: green;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.color .red {
+  background: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.color .blue {
+  background: blue;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.text button {
+  font-size: 14px;
+  padding: 14px 25px;
+  border-radius: 40px;
+  border: none;
+  margin: 10px auto;
+  display: block;
+  text-transform: uppercase;
+  background: #ffffff;
+  font-weight: bold;
+}
+
+.text .size ul li:nth-child(1):hover {
+  background: #12b2a4;
+}
+.text .size ul li:nth-child(2):hover {
+  background: #2dcc4a;
+}
+.text .size ul li:nth-child(3):hover {
+  background: #cb9713;
+}
+.text .size ul li:nth-child(4):hover {
+  background: #9321b3;
+}
+
+body::before {
+  content: " ";
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: #3ac3ac;
+  left: -50%;
+
+  border-radius: 50%;
+  z-index: -10;
+}
+
+body::after {
+  content: " ";
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: #095e44;
+  right: -50%;
+
+  border-radius: 50%;
+  z-index: -10;
+}
+
+.card:hover ~ body::after {
+  background: #a7a2a2;
+  height: 10px;
+}
+.card:hover ~ body::before {
+  background: #a7a2a2;
+  height: 10px;
+}

@@ -1,0 +1,81 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+}
+.contanier {
+  background: #b3b0b0;
+  margin: auto;
+  height: 600px;
+  width: 600px;
+  text-align: center;
+
+  transform: perspective(1);
+}
+
+.Table {
+  background: #807878;
+
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  margin-top: 25px;
+
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.Table .serface {
+  width: 300px;
+  height: 200px;
+  background: #000;
+  margin: auto;
+  transform: rotateX(60deg);
+  border: 10px solid rgb(111, 109, 109);
+  box-shadow: 0 2px 10px 2px black;
+  position: static;
+}
+.Table .leg1 {
+  background: #f6f4f4;
+  width: 10px;
+  height: 100px;
+  left: 120px;
+  position: absolute;
+  top: 10px;
+  transform: translateY(90px);
+}
+
+.Table .leg2 {
+  background: #f6f4f4;
+  width: 10px;
+  height: 100px;
+  right: 117px;
+  position: absolute;
+  top: 10px;
+  transform: translateY(90px) translateZ(0px);
+}
+.Table .leg3 {
+  background: #f6f4f4;
+  width: 8px;
+  height: 70px;
+  right: 124px;
+  position: absolute;
+  top: 60px;
+  transform: translateY(90px) translateZ(86px);
+}
+
+.Table .leg4 {
+  background: #f6f4f4;
+  width: 8px;
+  height: 71px;
+  left: 124px;
+  position: absolute;
+  top: 60px;
+  transform: translateY(90px) translateZ(86px);
+}

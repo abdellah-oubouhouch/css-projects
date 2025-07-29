@@ -1,0 +1,71 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+}
+
+.bg {
+  background: #461c1c;
+  margin-left: 30px;
+  width: 260px;
+  height: 260px;
+  position: relative;
+  margin: auto;
+}
+
+.father {
+  width: 200px;
+  height: 200px;
+  background: #d4d1d1;
+  position: fixed;
+}
+.child {
+  width: 50%;
+  height: 50%;
+  background: #19c8cb;
+  bottom: 0;
+  position: absolute;
+  left: 0;
+}
+/* --------------secon */
+/* 
+.bg1 {
+  background: #461c1c;
+  margin: auto;
+  width: 260px;
+  height: 260px;
+  position: relative;
+}
+.father1 {
+  width: 200px;
+  height: 200px;
+  background: #d4d1d1;
+  margin: auto;
+}
+
+.child {
+  width: 50%;
+  height: 50%;
+  background: #19c8cb;
+  top: 50%;
+  position: absolute;
+
+  transform: translate(-50%, -50%);
+  bottom: 0%;
+  left: 0%;
+}
+
+.child1 {
+  width: 50%;
+  height: 50%;
+  background: #a51414;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+
+  position: relative;
+} */
