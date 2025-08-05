@@ -1,0 +1,84 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background: linear-gradient(to right, rgb(17, 49, 17), rgb(19, 129, 19));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+
+  animation-name: animat;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: calc(0.1s * var(--i));
+  animation-iteration-count: infinite;
+}
+
+.circle {
+  /* background: #202020; */
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border-radius: 50%;
+  z-index: -3;
+}
+
+.circle i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: rotate(calc(18deg * var(--i)));
+  /* background: #753e3e00; */
+}
+
+.circle i::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background: #1598b0;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  animation-name: animated;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: calc(0.1s * var(--i));
+  animation-iteration-count: infinite;
+
+  box-shadow: 0 0 10px 0 #00ff0a, 0 0 20px 0 #00ff0a;
+}
+
+@keyframes animated {
+  0% {
+    scale: 1;
+    filter: hue-rotate(0deg);
+  }
+
+  50% {
+    scale: 1.3;
+  }
+  100% {
+    scale: 0;
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes animat {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
